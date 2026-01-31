@@ -1,2 +1,2 @@
 # fiftyninesixty
-[wccrpurdue.org](wccrpurdue.org) (10-12am Thursdays)
+[wccrpurdue.org](https://wccrpurdue.org) (10-12am Thursdays)
