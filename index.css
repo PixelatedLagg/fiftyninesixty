@@ -1,0 +1,71 @@
+body {
+    background-image: url("5960.jpg");
+    background-repeat: repeat;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'RoundsBlack';
+    src: url('rounds-black/Rounds\ Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'RoundsBlack';
+}
+
+h1 {
+    text-shadow: 5px 5px white;
+    text-decoration: underline;
+    font-size: 160px;
+    font-weight: bolder;
+}
+
+.column {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+}
+
+.main {
+    text-align: center;
+    backdrop-filter: saturate(500000%) blur(10px);
+    border-radius: 20px;
+    border: 5px solid white;
+    mix-blend-mode: difference;
+    background-color: gray;
+    color: red;
+    width: 100%;
+}
+
+.content {
+    color: black;
+}
+
+.content p {
+    mix-blend-mode: hue;
+    color: black;
+}
+
+.set-list-container {
+    background-color: black;
+    padding: 64px;
+}
+
+label {
+    color: white;
+}
+
+.set-list-container p, h3 {
+    color: white;
+}
+
+.set-list-container strong {
+    color: purple;
+}
+
+.set-list-container i {
+    color: orange;
+}
