@@ -7,37 +7,55 @@ let setlist = document.getElementById("set-list");
 fetch("data.json")
     .then((res) => res.text())
     .then((text) => {
-        jsonObj = JSON.parse(text);
-        console.log(jsonObj);
-        for (var i = 0; i < jsonObj.sets.length; i++) {
-            var set = jsonObj.sets[i];
+        jsonObject = JSON.parse(text);
+        for (var i = 0; i < jsonObject.sets.length; i++) {
+            var set = jsonObject.sets[i];
             setDropdown.innerHTML += `<option value="${set.date}">${set.date}</option>`;
         }
+
+        //simulate pressing "latest" for get set list
+        setlist.innerHTML = getSetForDate(jsonObject.sets[jsonObject.sets.length - 1]);
     })
 .catch((e) => console.error(e));
 
+function getSetForDate(set) {
+    var setBuilder = `<div class="set-date"><h2>${set.date}</h2><div><div class="set-date-column"><h3>Will:</h3>`;
+
+    for (var j = 0; j < set.will.length; j++) {
+        setBuilder += `<p><strong>${set.will[j][0]}</strong> - <i>${set.will[j][1]}</i>`;
+    }
+
+    setBuilder += `</div><div class="set-date-column"><h3>Maximus:</h3>`
+
+    for (var j = 0; j < set.max.length; j++) {
+        setBuilder += `<p><strong>${set.max[j][0]}</strong> - <i>${set.max[j][1]}</i>`;
+    }
+
+    setBuilder += "</div></div></div>";
+
+    return setBuilder;
+}
+
 getSetlist.onclick = function() {
-    console.log(setDropdown.value);
-    for (var i = 0; i < jsonObj.sets.length; i++) {
-        var set = jsonObj.sets[i];
+    if (setDropdown.value === "Latest") {
+        setlist.innerHTML = getSetForDate(jsonObject.sets[jsonObject.sets.length - 1]);
+        return;
+    }
+    if (setDropdown.value === "All") {
+        var allSets = "";
+        for (var i = 0; i < jsonObject.sets.length; i++) {
+            allSets += getSetForDate(jsonObject.sets[i]);
+        }
+        setlist.innerHTML = allSets;
+        return;
+    }
+    for (var i = 0; i < jsonObject.sets.length; i++) {
+        var set = jsonObject.sets[i];
         if (set.date !== setDropdown.value) {
             continue;
         }
 
-        var setBuilder = "<h3>Will:</h3>";
-
-        for (var j = 0; j < set.will.length; j++) {
-            console.log("hello");
-            setBuilder += `<p><strong>${set.will[j][0]}</strong> - <i>${set.will[j][1]}</i>`;
-        }
-
-        setBuilder += "<h3>Maximus:</h3>"
-
-        for (var j = 0; j < set.max.length; j++) {
-            setBuilder += `<p><strong>${set.max[j][0]}</strong> - <i>${set.max[j][1]}</i>`;
-        }
-
-        setlist.innerHTML = setBuilder;
+        setlist.innerHTML = getSetForDate(set);
         return;
     }
 };

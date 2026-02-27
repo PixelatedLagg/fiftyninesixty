@@ -86,6 +86,40 @@
                 ["Bladee", "Friday Nite"],
                 ["Lil B", "I Love You"]
             ]
+        },
+        {
+            "date": "2/26/26",
+            "will": [
+                ["Krischvn", "DMT"],
+                ["Skrude", "Parasomnia"],
+                ["Skrude", "Locust"],
+                ["MUERTE", "Dogma - Original Mix"],
+                ["Of The Trees", "Muscaria"],
+                ["Space Wizard", "The Maze Guardian"],
+                ["Spag Heddy", "Zoom"],
+                ["Spag Heddy", "Get To U"],
+                ["sfam", "wheel dat back"],
+                ["MeSo & SAGZ", "JAWN"],
+                ["MeSo & SAGZ", "Roll Call"],
+                ["Skrude & Danny Brown", "Parasomnia x All4U"],
+                ["Quasimoto & Madvillain & Madlib", "Closer"],
+                ["Quasimoto", "Green Power"],
+                ["Quasimoto & Madlib", "Broad Factor"],
+                ["Quasimoto & Madlib", "The Front"]
+            ],
+            "max": [
+                ["Boris", "Pink"],
+                ["Boris", "Woman on the Screen"],
+                ["Electric Wizard", "Funeralopolis"],
+                ["Alice In Chains", "Sludge Factory"],
+                ["Deafheaven", "Magnolia"],
+                ["Boris", "Korosu"],
+                ["Death Grips", "Turned Off"],
+                ["TOOL", "Stinkfist"],
+                ["Hella", "Biblical Violence"],
+                ["Death", "Crystal Mountain"],
+                ["Lift To Experience", "Falling From Cloud 9"]
+            ]
         }
     ]
 }
