@@ -120,6 +120,43 @@
                 ["Death", "Crystal Mountain"],
                 ["Lift To Experience", "Falling From Cloud 9"]
             ]
+        },
+        {
+            "date": "3/12/26",
+            "will" : [
+                ["MIKE", "What U Say U Are"],
+                ["Ivy Lab", "Lucy"],
+                ["KMD & MF DOOM", "Plumskinnz (Loose Hoe, God & Cupid)"],
+                ["As Blood Runs Black", "Intro"],
+                ["Lomiiel", "HAY LUPITA"],
+                ["Bauhaus", "Small Talk Stinks"],
+                ["Skrillex & Swae Lee & SIIICKBRAIN & Posij", "TOO BIZARRE (juked)"],
+                ["Polyphia & Jason Richardson", "Nasty"],
+                ["Three 6 Mafia", "Half On a Sack"],
+                ["redveil & JPEGMAFIA", "black enuff"],
+                ["Thundercat", "A Fan's Mail (Tron Song Suite II)"],
+                ["Machine Girl", "Lilith"],
+                ["Madvillain & Madlib & MF DOOM & MED", "Raid"],
+                ["JPEGMAFIA & Danny Brown", "HOE (Heaven on Earth)"],
+                ["Salsa Celtica", "Whiskey Con Ron"],
+                ["Outkast", "ATLiens"],
+                ["Hail The Sun", "There's Plenty of Fish in the Sea (Too Bad You're Not a Fish)"],
+                ["Bad Bunny", "NUEVAYoL"],
+                ["Isaiah Rashad & Zacari & Kendrick Lamar", "Wat's Wrong"]
+            ],
+            "max": [
+                ["Jane Remover", "Music Baby"],
+                ["Swans", "Big Strong Boss"],
+                ["Drake", "God's Plan"]
+            ],
+            "other" : [
+                {
+                    "name" : "Elle",
+                    "songs" : [
+                        ["On Broken Wings", "The Spawning of Progression"]
+                    ]
+                }
+            ]
         }
     ]
 }

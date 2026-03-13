@@ -27,13 +27,13 @@ h1 {
     font-family: 'RoundsBlack';
 }
 
-p, h2, h3, strong, i, label, select, button {
+p, h2, h3, strong, i, label, select, button, option {
     font-family: 'PlayfairDisplay';
 }
 
 .column {
     margin: auto;
-    width: 60%;
+    width: 70%;
     height: 100%;
 }
 
@@ -102,7 +102,7 @@ label {
     height: 100%;
 }
 
-.set-date > div {
+.set-date > h2 + div {
     display: flex;
     flex-direction: row;
     margin: 0;

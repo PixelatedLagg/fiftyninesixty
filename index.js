@@ -8,7 +8,7 @@ fetch("data.json")
     .then((res) => res.text())
     .then((text) => {
         jsonObject = JSON.parse(text);
-        for (var i = 0; i < jsonObject.sets.length; i++) {
+        for (var i = jsonObject.sets.length - 1; i > -1; i--) {
             var set = jsonObject.sets[i];
             setDropdown.innerHTML += `<option value="${set.date}">${set.date}</option>`;
         }
@@ -31,9 +31,19 @@ function getSetForDate(set) {
         setBuilder += `<p><strong>${set.max[j][0]}</strong> - <i>${set.max[j][1]}</i>`;
     }
 
-    setBuilder += "</div></div></div>";
+    setBuilder += "</div></div>";
 
-    return setBuilder;
+    if (set.other != null) {
+        for (var j = 0; j < set.other.length; j++) {
+            setBuilder += `<div><h3>${set.other[j].name}:</h3>`;
+            for (var k = 0; k < set.other[j].songs.length; k++) {
+                setBuilder += `<p><strong>${set.other[j].songs[k][0]}</strong> - <i>${set.other[j].songs[k][1]}</i></p>`;
+            }
+            setBuilder += "</div>";
+        }
+    }
+
+    return setBuilder + "</div>";
 }
 
 getSetlist.onclick = function() {
